@@ -15,13 +15,13 @@ export const Navbar = () => {
             </div>
             <ul className="nav-menu">
                 <li onClick={() => (setMenu('shop'))}><Link to='/' style={{textDecoration: 'none', color: 'black'}}>SHOP</Link> {menu === "shop"? <hr/>:<></>}</li>
-                <li onClick={() => (setMenu("mans"))}><Link to='/mens' style={{textDecoration: 'none', color: 'black'}}>MAN</Link> {menu === "mans"? <hr/>:<></>}</li>
-                <li onClick={() => (setMenu("womens"))}><Link to='/womens' style={{textDecoration: 'none', color: 'black'}}>WOMEN</Link> {menu === "womens"? <hr/>:<></>}</li>
-                <li onClick={() => (setMenu("kids"))}><Link to='/kids' style={{textDecoration: 'none', color: 'black'}}>KIDS</Link> {menu === "kids"? <hr/>:<></>}</li>
+                <li onClick={() => (setMenu("man"))}><Link to='/mens' style={{textDecoration: 'none', color: 'black'}}>MAN</Link> {menu === "man"? <hr/>:<></>}</li>
+                <li onClick={() => (setMenu("women"))}><Link to='/women' style={{textDecoration: 'none', color: 'black'}}>WOMEN</Link> {menu === "women"? <hr/>:<></>}</li>
+                <li onClick={() => (setMenu("kid"))}><Link to='/kids' style={{textDecoration: 'none', color: 'black'}}>KIDS</Link> {menu === "kid"? <hr/>:<></>}</li>
             </ul>
             <div className="nav-login-cart">
-                <Link to="/Login"><button>Login</button></Link>
-                <Link to="/Cart"><img src={cart_icon} alt="cart icon" /></Link>
+                <Link to="/Login"><button onClick={() => (setMenu('login'))}>Login</button></Link>
+                <Link to="/Cart"><img src={cart_icon} alt="cart icon" onClick={() => (setMenu('cart'))} /></Link>
                 <div className="nav-cart-count">0</div>
             </div>
         </div>

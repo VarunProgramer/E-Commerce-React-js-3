@@ -35,6 +35,8 @@
     font-size: 38px;
     font-weight: 600;
     color: #171717;
+    text-decoration: none;
+    outline: none;
 }
 .nav-login-cart{
     display: flex;
